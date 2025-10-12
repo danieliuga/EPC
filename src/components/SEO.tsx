@@ -5,11 +5,14 @@ type SEOProps = {
   description?: string
   image?: string
   url?: string
+  rawTitle?: boolean
 }
 
-export default function SEO({ title, description, image, url }: SEOProps) {
+export default function SEO({ title, description, image, url, rawTitle = false }: SEOProps) {
   const siteName = 'EPC'
-  const baseTitle = title ? `${title} — ${siteName}` : `${siteName} — Diseño + Tecnología`
+  const baseTitle = title
+    ? (rawTitle ? title : `${title} — ${siteName}`)
+    : `${siteName} — Diseño + Tecnología`
   const desc = description ?? 'Proyectos de alto impacto con resultados medibles.'
 
   return (

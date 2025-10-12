@@ -35,7 +35,7 @@ export default function Home() {
   }
   return (
     <>
-      <SEO title="Inicio" description="Acción, mérito y libertad académica. Jóvenes organizados para transformar la universidad." />
+      <SEO title="Estudiants Pel Canvi" rawTitle description="Acción, mérito y libertad académica. Jóvenes organizados para transformar la universidad." />
 
       {/* Hero */}
       <section className="relative overflow-hidden min-h-[calc(100vh-4rem)] flex items-center">
@@ -198,7 +198,7 @@ export default function Home() {
           <h2 className="font-display text-3xl md:text-5xl">Agenda y acciones</h2>
           <ul className="mt-8 divide-y divide-border rounded-md border border-border bg-white">
             {[
-              { date: '12 NOV', title: 'Asamblea abierta · Facultad de Derecho', tag: 'Próximo' },
+              { date: '12 NOV', title: 'Asamblea abierta — Facultad de Derecho', tag: 'Próximo' },
               { date: '03 NOV', title: 'Entrega de propuestas a decanato', tag: 'Realizado' },
               { date: '28 OCT', title: 'Debate: Libertad académica y pluralidad', tag: 'Realizado' },
             ].map((e, idx) => (
@@ -269,3 +269,5 @@ export default function Home() {
     </>
   )
 }
+
+
