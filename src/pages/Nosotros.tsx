@@ -1,4 +1,3 @@
-import Section from '../components/Section'
 import SEO from '../components/SEO'
 
 export default function Nosotros() {
