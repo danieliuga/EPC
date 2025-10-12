@@ -9,9 +9,13 @@ type CarouselItem = {
 
 type CarouselProps = {
   items: CarouselItem[]
+  auto?: boolean
+  intervalMs?: number
+  hideArrows?: boolean
+  ratioClass?: string
 }
 
-export default function Carousel({ items }: CarouselProps) {
+export default function Carousel({ items, auto = false, intervalMs = 4000, hideArrows = false, ratioClass = 'aspect-[16/9]' }: CarouselProps) {
   const viewportRef = useRef<HTMLDivElement>(null)
   const [index, setIndex] = useState(0)
 
@@ -34,6 +38,15 @@ export default function Carousel({ items }: CarouselProps) {
     return () => el.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    if (!auto || items.length === 0) return
+    const id = setInterval(() => {
+      const next = (index + 1) % items.length
+      scrollToIndex(next)
+    }, intervalMs)
+    return () => clearInterval(id)
+  }, [auto, intervalMs, index, items.length])
+
   return (
     <div className="relative">
       <div
@@ -48,7 +61,7 @@ export default function Carousel({ items }: CarouselProps) {
               className="min-w-full snap-start"
               aria-label={item.title}
             >
-              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-md border border-border bg-surface shadow-soft">
+              <div className={`relative ${ratioClass} w-full overflow-hidden rounded-md border border-border bg-surface shadow-soft`}>
                 <img
                   src={item.image}
                   alt={item.title}
@@ -76,12 +89,13 @@ export default function Carousel({ items }: CarouselProps) {
             />
           ))}
         </div>
-        <div className="flex gap-2">
-          <button className="btn-ghost py-2 px-3" onClick={() => scrollToIndex(index - 1)}>Anterior</button>
-          <button className="btn-primary py-2 px-3" onClick={() => scrollToIndex(index + 1)}>Siguiente</button>
-        </div>
+        {!hideArrows && (
+          <div className="flex gap-2">
+            <button className="btn-ghost py-2 px-3" onClick={() => scrollToIndex(index - 1)}>Anterior</button>
+            <button className="btn-primary py-2 px-3" onClick={() => scrollToIndex(index + 1)}>Siguiente</button>
+          </div>
+        )}
       </div>
     </div>
   )
 }
-

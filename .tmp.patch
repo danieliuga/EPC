@@ -1,0 +1,6 @@
+*** Begin Patch
+*** Update File: EPC/src/pages/Home.tsx
+@@
+-      <SEO title="Inicio" description="Acci��n, mǸrito y libertad acadǸmica. J��venes organizados para transformar la universidad." />
++      <SEO title="Inicio" description="Acción, mérito y libertad académica. Jóvenes organizados para transformar la universidad." />
+*** End Patch
