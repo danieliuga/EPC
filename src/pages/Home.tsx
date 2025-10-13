@@ -5,14 +5,6 @@ import { NavLink } from 'react-router-dom'
 import Carousel from '../components/Carousel'
 
 export default function Home() {
-  // Hero slideshow images and index
-  const heroImages = [
-    'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1600&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1600&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1529078155058-5d716f45d604?q=80&w=1600&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=1600&auto=format&fit=crop',
-  ]
 
   const images = [
     '/Imagen1.jpg',
