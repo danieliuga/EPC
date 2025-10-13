@@ -43,19 +43,19 @@ export const projects: Project[] = [
     slug: 'defensa-derechos',
     title: 'Defensa de derechos estudiantiles',
     summary: 'Campaña informativa y recogida de propuestas para frenar abusos y mejorar procesos académicos.',
-    cover: 'https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop',
+    cover: '/Imagen1.jpg',
     impact: ['Participación en órganos universitarios', 'Propuestas elevadas a decanato']
   },
   {
     slug: 'libertad-academica',
     title: 'Libertad académica',
-    summary: 'Acciones pacíficas y diálogo institucional para proteger la pluralidad en las aulas.',
-    cover: 'https://images.unsplash.com/photo-1525811902-f2342640856e?q=80&w=1600&auto=format&fit=crop'
+    cover: '/Imagen10.jpg',
+    summary: 'Acciones pacíficas y diálogo institucional para proteger la pluralidad en las aulas.'
   },
   {
     slug: 'mentorias-epc',
     title: 'Programa de mentorías EPC',
-    summary: 'Acompañamiento a nuevos estudiantes y actividades para integrarse a la vida universitaria.',
-    cover: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1600&auto=format&fit=crop'
+    cover: '/Imagen9.jpg',
+    summary: 'Acompañamiento a nuevos estudiantes y actividades para integrarse a la vida universitaria.'
   },
 ]

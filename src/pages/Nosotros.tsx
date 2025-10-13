@@ -17,7 +17,7 @@ export default function Nosotros() {
             </p>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1532635339698-7f19ad4f2a5e?q=80&w=1600&auto=format&fit=crop"
+            src="/Imagen7.jpg"
             alt="Movilización estudiantil"
             className="aspect-[4/3] w-full rounded-md border border-border object-cover shadow-soft"
           />
@@ -28,7 +28,7 @@ export default function Nosotros() {
       <section className="bg-surface py-16 md:py-24">
         <div className="container-app grid grid-cols-1 items-center gap-10 md:grid-cols-2">
           <img
-            src="https://images.unsplash.com/photo-1552423313-0a91748d1d1f?q=80&w=1600&auto=format&fit=crop"
+            src="/Imagen11.jpg"
             alt="Comunidad de estudiantes"
             className="order-1 aspect-[4/3] w-full rounded-md border border-border object-cover shadow-soft md:order-none"
           />

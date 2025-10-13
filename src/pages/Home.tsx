@@ -13,9 +13,24 @@ export default function Home() {
     'https://images.unsplash.com/photo-1529078155058-5d716f45d604?q=80&w=1600&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=1600&auto=format&fit=crop',
   ]
+
+  const images = [
+    '/Imagen1.jpg',
+    '/Imagen2.jpg',
+    '/Imagen3.jpg',
+    '/Imagen4.jpg',
+    '/Imagen5.jpg',
+    '/Imagen6.jpg',
+    '/Imagen7.jpg',
+    '/Imagen8.jpg',
+    '/Imagen9.jpg',
+    '/Imagen10.jpg',
+    '/Imagen11.jpg',
+  ];
+
   const [heroIndex, setHeroIndex] = useState(0)
   useEffect(() => {
-    const id = setInterval(() => setHeroIndex((i) => (i + 1) % heroImages.length), 3000)
+    const id = setInterval(() => setHeroIndex((i) => (i + 1) % images.length), 3000)
     return () => clearInterval(id)
   }, [])
   function CountUp({ value, duration = 1500, suffix = '' }: { value: number; duration?: number; suffix?: string }) {
@@ -41,7 +56,7 @@ export default function Home() {
       <section className="relative overflow-hidden min-h-[calc(100vh-4rem)] flex items-center">
         {/* Background slideshow */}
         <div className="absolute inset-0">
-          {heroImages && heroImages.map((src, i) => (
+          {images && images.map((src, i) => (
             <img
               key={src}
               src={src}
@@ -71,7 +86,7 @@ export default function Home() {
                 <NavLink to="/contacto#unete" className="btn-primary w-full md:w-auto">Únete a EPC</NavLink>
                 <NavLink
                   to="/proyectos"
-                  className="w-full md:w-auto inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-semibold text-ink shadow-soft transition-[transform,box-shadow] duration-200 ease-smooth hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                  className="w-full md:w-auto btn-ghost"
                 >
                   Ver proyectos
                 </NavLink>
@@ -152,7 +167,7 @@ export default function Home() {
         <div className="container-app grid grid-cols-1 items-center gap-6 md:grid-cols-2">
           <div className="relative overflow-hidden rounded-md border border-border shadow-soft">
             <img
-              src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?q=80&w=1600&auto=format&fit=crop"
+              src='/Imagen11.jpg'
               alt="Trabajo en equipo"
               className="aspect-[16/10] w-full object-cover"
               loading="lazy"
@@ -174,10 +189,10 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-surface">
         <div className="container-app grid grid-cols-1 gap-10 md:grid-cols-2">
           {[
-            { title: 'Formación', text: 'Charlas, debates libres y aprendizaje crítico.', img: 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1600&auto=format&fit=crop' },
-            { title: 'Acción', text: 'Órganos universitarios, campañas y movilizaciones.', img: 'https://images.unsplash.com/photo-1525811902-f2342640856e?q=80&w=1600&auto=format&fit=crop' },
-            { title: 'Comunidad', text: 'Mentorías y apoyo entre compañeros.', img: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop' },
-            { title: 'Diversión', text: 'Quedadas, cenas y Birras x EPC.', img: 'https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1600&auto=format&fit=crop' },
+            { title: 'Formación', text: 'Charlas, debates libres y aprendizaje crítico.', img: '/Imagen7.jpg' },
+            { title: 'Acción', text: 'Órganos universitarios, campañas y movilizaciones.', img: '/Imagen5.jpg' },
+            { title: 'Comunidad', text: 'Mentorías y apoyo entre compañeros.', img: '/Imagen8.jpg' },
+            { title: 'Diversión', text: 'Quedadas, cenas y Birras x EPC.', img: '/Imagen10.jpg' },
           ].map((card) => (
             <Reveal key={card.title}>
               <div className="reveal relative overflow-hidden rounded-md border border-border shadow-soft">
@@ -225,13 +240,13 @@ export default function Home() {
             items={[
               {
                 id: 't1',
-                image: 'https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=1600&auto=format&fit=crop',
+                image: '/Imagen3.jpg',
                 title: '“EPC me dio voz y un espacio seguro para debatir en libertad.”',
                 subtitle: 'Mar',
               },
               {
                 id: 't2',
-                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1600&auto=format&fit=crop',
+                image: '/Imagen2.jpg',
                 title: '“Aprendí más en sus debates que en muchas clases magistrales.”',
                 subtitle: 'Joel',
               },

@@ -24,7 +24,7 @@ export default function Proyectos() {
             {
               title: 'Birras X EPC',
               text: 'Espacio informal para desconectar, charlar y conocernos mejor. La comunidad también se construye entre risas y birras.',
-              img: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c76c6?q=80&w=1600&auto=format&fit=crop'
+              img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=1600&auto=format&fit=crop'
             },
             {
               title: 'Diversión',

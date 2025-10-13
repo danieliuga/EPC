@@ -32,8 +32,12 @@ export default function Header() {
             </button>
 
             <NavLink to="/" className="flex items-center gap-2 text-ink font-bold tracking-tight">
-              <span className="inline-block h-3 w-3 rounded-sm bg-primary" aria-hidden />
-              EPC
+              <img
+              src='/LOGO PNG LETRAS GRISES.png'
+              alt="EPC"
+              className="inline-block h-28 w-28"
+              loading="lazy"
+            />
             </NavLink>
           </div>
 
@@ -54,7 +58,7 @@ export default function Header() {
 
           {/* Botones a la derecha */}
           <div className="flex items-center gap-3">
-            <NavLink to="/contacto#donar" className="btn-primary">Donar</NavLink>
+            <NavLink to="/contacto/donar" className="btn-primary">Donar</NavLink>
             <NavLink to="/contacto" className="btn-ghost">Hablemos</NavLink>
           </div>
         </div>
