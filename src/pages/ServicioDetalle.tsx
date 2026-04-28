@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 import Section from '../components/Section'
 import { services } from '../data/content'
 import SEO from '../components/SEO'
@@ -8,7 +8,16 @@ export default function ServicioDetalle() {
   const service = services.find((s) => s.slug === slug)
 
   if (!service) {
-    return <div className="container-app py-20">Servicio no encontrado.</div>
+    return (
+      <section className="py-24">
+        <div className="container-app text-center">
+          <p className="font-display text-5xl text-primary">404</p>
+          <h1 className="mt-4 font-display text-2xl text-ink">Servicio no encontrado</h1>
+          <p className="mt-2 text-ink/70">El servicio que buscas no existe o ha sido eliminado.</p>
+          <NavLink to="/servicios" className="btn-primary mt-6 inline-flex">Ver todos los servicios</NavLink>
+        </div>
+      </section>
+    )
   }
 
   return (
@@ -37,4 +46,3 @@ export default function ServicioDetalle() {
     </>
   )
 }
-
