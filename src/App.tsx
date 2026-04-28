@@ -9,6 +9,7 @@ import ProyectoDetalle from './pages/ProyectoDetalle'
 import Nosotros from './pages/Nosotros'
 import Contacto from './pages/Contacto'
 import Donar from './pages/Donar'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/contacto/donar" element={<Donar />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
       </BrowserRouter>
