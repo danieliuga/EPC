@@ -40,6 +40,32 @@
   [data-inview="true"] > .reveal-right { @apply opacity-100 translate-x-0 translate-y-0; }
 }
 
+/* Splash screen */
+@keyframes splashDrop {
+  from { transform: translateY(-80px) scale(0.9); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes splashGlow {
+  0%   { filter: drop-shadow(0 0 20px rgba(245,176,39,0.95)); }
+  100% { filter: drop-shadow(0 0 8px rgba(245,176,39,0.35)); }
+}
+@keyframes splashLine {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
+@keyframes splashReveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+@keyframes splashSubtitle {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes splashExit {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(1.04); }
+}
+
 /* Page transition */
 @keyframes pageIn {
   from { opacity: 0; transform: translateY(10px); }
