@@ -149,12 +149,18 @@ export default function Contacto() {
 
                   <div>
                     <button
-                      className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
                       type="submit"
-                      disabled={status === 'sending'}
+                      disabled
                     >
-                      {status === 'sending' ? 'Enviando…' : 'Enviar'}
+                      Enviar
                     </button>
+                    <p className="mt-2 text-center text-xs text-ink/50">
+                      Formulario temporalmente desactivado. Escríbenos directamente a{' '}
+                      <a href="mailto:estudiantspelcanvi@gmail.com" className="underline underline-offset-2 hover:text-ink transition-colors">
+                        estudiantspelcanvi@gmail.com
+                      </a>
+                    </p>
                   </div>
                 </div>
               )}

@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom'
 import SEO from '../components/SEO'
 
 const plans = [
@@ -8,7 +7,7 @@ const plans = [
     text: '¿Eres estudiante? Defendemos tus derechos. Súmate al cambio.',
     features: ['Acceso a todos los eventos', 'Voto en asambleas', 'Grupo de Telegram EPC'],
     img: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1600&auto=format&fit=crop',
-    to: '/contacto#unete',
+    stripeUrl: '',
   },
   {
     title: 'Membresía Reducida',
@@ -16,7 +15,7 @@ const plans = [
     text: 'Gracias por apoyar el cambio. Cada euro suma.',
     features: ['Todo lo de Estudiantil', 'Newsletter mensual', 'Material de formación exclusivo'],
     img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop',
-    to: '/contacto#unete',
+    stripeUrl: '',
   },
   {
     title: 'Membresía Comprometida',
@@ -24,7 +23,7 @@ const plans = [
     text: 'Tu cuota lo hace posible. ¡Gracias, patriota!',
     features: ['Todo lo de Reducida', 'Acceso prioritario a acciones', 'Mención en canales oficiales'],
     img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop',
-    to: '/contacto#unete',
+    stripeUrl: '',
   },
   {
     title: 'Membresía Generosa',
@@ -32,7 +31,7 @@ const plans = [
     text: 'Aportas mucho más que una cuota; construyes el futuro del activismo.',
     features: ['Todo lo de Comprometida', 'Reconocimiento como patrocinador', 'Acceso a reuniones estratégicas'],
     img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop',
-    to: '/contacto#unete',
+    stripeUrl: '',
   },
 ]
 
@@ -80,12 +79,23 @@ export default function Donar() {
                       </li>
                     ))}
                   </ul>
-                  <NavLink
-                    to={card.to}
-                    className="btn-primary mt-4 w-full justify-center"
-                  >
-                    Unirme
-                  </NavLink>
+                  {card.stripeUrl ? (
+                    <a
+                      href={card.stripeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary mt-4 w-full justify-center"
+                    >
+                      Unirme
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="btn-primary mt-4 w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      Próximamente
+                    </button>
+                  )}
                 </div>
               </article>
             ))}
